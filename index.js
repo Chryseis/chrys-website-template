@@ -3,6 +3,9 @@
  */
 const fs = require('fs');
 const path = require('path');
+const glob=require('glob');
+
+console.log(process.cwd());
 
 console.log(path.resolve(__dirname, 'src'))
 
