@@ -43,5 +43,7 @@ module.exports = merge(baseWebpackConfig, {
         new ExtractTextPlugin({
             filename: '[name].css',
             allChunks: true
-        })].concat(htmlPlugin)
+        }),new webpack.ProvidePlugin({
+            "$": "jquery"
+        }),].concat(htmlPlugin)
 })

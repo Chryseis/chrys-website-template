@@ -45,6 +45,9 @@ module.exports = merge(baseWebpackConfig, {
             filename: 'css/[name].css',
             allChunks: true
         }),
+        new webpack.ProvidePlugin({
+            "$": "jquery"
+        }),
         new UglifyJSPlugin({
             compress: {
                 warnings: true

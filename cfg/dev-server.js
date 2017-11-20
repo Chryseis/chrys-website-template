@@ -40,7 +40,6 @@ app.listen(port, function (err) {
     console.log(chalk.blue(' # Access URLs:'));
     console.log(chalk.gray(' ----------------------------------------'));
     console.log('     Local: ' + chalk.green('http://localhost:' + port));
-    console.log('  External: ' + chalk.green('http://' + host + ':' + port));
     console.log(chalk.gray(' ----------------------------------------'));
     console.log('');
 
