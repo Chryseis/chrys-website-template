@@ -41,9 +41,13 @@ module.exports = merge(baseWebpackConfig, {
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
             }
-        }),
-        new webpack.NoEmitOnErrorsPlugin(), new ExtractTextPlugin({
+        }), new ExtractTextPlugin({
             filename: 'css/[name].css',
             allChunks: true
+        }),
+        new UglifyJSPlugin({
+            compress: {
+                warnings: true
+            }
         })].concat(htmlPlugin)
 })

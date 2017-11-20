@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node cfg/dev-server.js",
-    "build":"node cfg/build.js",
+    "build": "node cfg/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "allen",
@@ -33,7 +33,7 @@
     "postcss-loader": "^2.0.8",
     "rimraf": "^2.6.2",
     "style-loader": "^0.19.0",
-    "uglifyjs-webpack-plugin": "^1.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-middleware": "^1.12.0",
