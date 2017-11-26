@@ -17,7 +17,7 @@ let htmlPlugin = [];
 let entryDirArr = fs.readdirSync(path.resolve(__dirname, '../src'));
 
 entryDirArr.forEach((dir, i) => {
-    entry[dir] = [path.resolve(__dirname, '../src', `${dir}/${dir}.js`), path.resolve(__dirname, '../common/css/reset/css')];
+    entry[dir] = [path.resolve(__dirname, '../src', `${dir}/${dir}.js`), path.resolve(__dirname, '../common/css/reset.css')];
 });
 
 Object.keys(entry).forEach((key, i) => {

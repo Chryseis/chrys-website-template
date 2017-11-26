@@ -16,7 +16,7 @@ let htmlPlugin = [];
 let entryDirArr = fs.readdirSync(path.resolve(__dirname, '../src'));
 
 entryDirArr.forEach((dir, i) => {
-    entry[dir] = ['webpack-hot-middleware/client?noInfo=false&reload=true', path.resolve(__dirname, '../src', `${dir}/${dir}.js`), path.resolve(__dirname, '../common/css/reset/css')];
+    entry[dir] = ['webpack-hot-middleware/client?noInfo=false&reload=true', path.resolve(__dirname, '../src', `${dir}/${dir}.js`), path.resolve(__dirname, '../common/css/reset.css')];
 });
 
 Object.keys(entry).forEach((key, i) => {
