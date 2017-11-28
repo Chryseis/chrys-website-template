@@ -22,8 +22,8 @@ app.use(require('connect-history-api-fallback')());
 
 app.use(webpackDevMiddleware(compiler, {
     publicPath: '/',
-    quiet: true,
-    noInfo: true
+    quiet: false,
+    noInfo: false
 }));
 
 app.use(webpackHotMiddleware(compiler, {
