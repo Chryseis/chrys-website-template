@@ -36,6 +36,7 @@ module.exports = merge(baseWebpackConfig, {
         filename: 'js/[name].js',
         sourceMapFilename: '[file].map'
     },
+    devtool:'source-map',
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
@@ -51,6 +52,7 @@ module.exports = merge(baseWebpackConfig, {
         new UglifyJSPlugin({
             compress: {
                 warnings: true
-            }
+            },
+            sourceMap: true
         })].concat(htmlPlugin)
 })

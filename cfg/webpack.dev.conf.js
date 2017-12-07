@@ -35,6 +35,7 @@ module.exports = merge(baseWebpackConfig, {
         filename: '[name].js',
         sourceMapFilename: '[file].map'
     },
+    devtool:'source-map',
     plugins: [new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: JSON.stringify('develop')
