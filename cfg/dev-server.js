@@ -13,7 +13,7 @@ const webpackConfig = require('./webpack.dev.conf');
 
 
 const host='127.0.0.1';
-const port = '8080';
+const port = '8082';
 
 const app = express();
 const compiler = webpack(webpackConfig);

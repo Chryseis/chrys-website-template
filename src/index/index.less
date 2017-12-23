@@ -18,6 +18,7 @@
     transform-origin: 50% 100%;
     &.active{
       &:before{
+        opacity:.5;
         transform: scaleX(0);
       }
     }
@@ -43,6 +44,7 @@
       background-color: #000;
       transition: all .3s ease-in;
       transform: scaleX(1);
+      opacity: 1;
       transform-origin: left 0;
     }
     &.one {

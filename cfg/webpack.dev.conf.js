@@ -13,7 +13,7 @@ let entry = {};
 
 let htmlPlugin = [];
 
-let entryDirArr = fs.readdirSync(path.resolve(__dirname, '../src'));
+let entryDirArr = fs.readdirSync(path.resolve(__dirname, '../src')).filter((dir) => dir !== 'components');
 
 entryDirArr.forEach((dir, i) => {
     entry[dir] = ['webpack-hot-middleware/client?noInfo=false&reload=true', path.resolve(__dirname, '../src', `${dir}/${dir}.js`), path.resolve(__dirname, '../common/css/reset.css')];
@@ -23,9 +23,11 @@ Object.keys(entry).forEach((key, i) => {
     htmlPlugin.push(new HtmlWebpackPlugin({
         filename: `${key}.html`,
         template: path.resolve(__dirname, '../template', `${key}.html`),
-        chunks: [`${key}`]
+        chunks: [`${key}`,'components']
     }))
 })
+
+entry['components'] = path.resolve(__dirname, '../src/components/components.less');
 
 module.exports = merge(baseWebpackConfig, {
     entry,
@@ -35,7 +37,7 @@ module.exports = merge(baseWebpackConfig, {
         filename: '[name].js',
         sourceMapFilename: '[file].map'
     },
-    devtool:'source-map',
+    devtool: 'source-map',
     plugins: [new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: JSON.stringify('develop')

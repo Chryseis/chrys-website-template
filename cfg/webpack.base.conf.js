@@ -11,6 +11,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            interpolate: true
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.js$/,
                 include: [
                     path.resolve(__dirname, '../src')
