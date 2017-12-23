@@ -24,7 +24,7 @@ Object.keys(entry).forEach((key, i) => {
     htmlPlugin.push(new HtmlWebpackPlugin({
         filename: `${key}.html`,
         template: path.resolve(__dirname, '../template', `${key}.html`),
-        chunks: [`${key}`,'components']
+        chunks: ['components',`${key}`]
     }))
 })
 
